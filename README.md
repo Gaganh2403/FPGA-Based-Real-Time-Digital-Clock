@@ -1,14 +1,43 @@
-# FPGA-Based Digital Clock ⏰
+<h1 align="center">⏰ FPGA-Based Real-Time Digital Clock</h1>
 
-A 24-hour digital clock implemented in **Verilog HDL** on an FPGA board.  
-The design demonstrates clock division, counters, debouncing, and 7-segment multiplexing.
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-FPGA-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Language-Verilog%20HDL-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Tool-Vivado%2FQuartus-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Display-7--Segment-black?style=for-the-badge">
+</p>
 
-## 🔧 Features
-- 24-hour clock (HH:MM) with seconds tracked internally
-- Clock divider generates 1 Hz, 100 Hz, and 1 kHz signals
-- Debounced push buttons for hour/minute adjustment
-- Multiplexed 7-segment display driver
-- Blinking colon/LED indicator for seconds
+---
+
+## 📸 Project Overview
+
+A **24-hour digital clock** implemented on an **FPGA development board** using **Verilog HDL**.  
+The system tracks **hours, minutes, and seconds**, displays them on a **7-segment display**, and includes **push-button controls** for time adjustment.
+
+> 💡 Demonstrates **digital logic design concepts** like clock division, counters, debouncing, and display multiplexing.
+
+---
+
+## 🧰 Features
+
+✅ 24-hour format digital clock (HH:MM)  
+✅ Clock divider from 100 MHz/50 MHz → 1 Hz pulse  
+✅ Debounced push buttons for hour & minute adjustment  
+✅ Multiplexed **7-segment display driver**  
+✅ Blinking colon/LED for seconds indication  
+✅ Modular Verilog design for easy extensions  
+
+---
+
+## 🧠 System Workflow
+
+- 🔄 **Clock Divider**: Converts FPGA’s high-frequency clock into a 1 Hz tick  
+- ⏱️ **Counters**: Seconds → Minutes → Hours rollover (24-hour format)  
+- 🎛️ **Input Control**: Push buttons adjust hours/minutes (debounced for accuracy)  
+- 🔢 **Display Driver**: Multiplexes digits onto the 7-segment display  
+- ✨ **Colon LED**: Toggles every second for real-time effect  
+
+---
 
 ## 📂 Repository Structure
 - `src/` – Verilog source files  
